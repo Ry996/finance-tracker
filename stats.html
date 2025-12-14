@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minimal Finance Tracker - Stats</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+ <header>
+  <div class="header-inner">
+    <div class="brand">
+      <h1>Minimal Finance Tracker</h1>
+      <small>Simple • Local • No backend</small>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="add.html">Add</a></li>
+        <li><a href="stats.html">Stats</a></li>
+        <li><a href="records.html">Records</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <main>
+    <section aria-labelledby="stats-title">
+      <h2 id="stats-title">Statistics</h2>
+
+      <div class="inline" style="margin: 0.8rem 0;">
+        <div class="row" style="min-width: 220px;">
+          <label for="stats-month">Month</label>
+          <select id="stats-month"></select>
+        </div>
+
+        <div class="row" style="min-width: 220px;">
+          <label for="stats-mode">Chart</label>
+          <select id="stats-mode">
+            <option value="bar">Bar (Income vs Expense)</option>
+            <option value="pie">Pie (Expense by Category)</option>
+          </select>
+        </div>
+      </div>
+
+      <p id="stats-summary" class="card">—</p>
+
+      <div class="canvas-wrap">
+        <canvas id="chart" width="900" height="360" aria-label="Monthly chart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Web Application Development – Final Project</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

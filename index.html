@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minimal Finance Tracker - Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header>
+  <div class="header-inner">
+    <div class="brand">
+      <h1>Minimal Finance Tracker</h1>
+      <small>Simple • Local • No backend</small>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="add.html">Add</a></li>
+        <li><a href="stats.html">Stats</a></li>
+        <li><a href="records.html">Records</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section aria-labelledby="overview-title">
+      <h2 id="overview-title">Overview (This Month)</h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Total Income</h3>
+          <p class="big" id="total-income">$0.00</p>
+          <small>Income in the current month</small>
+        </article>
+
+        <article class="card">
+          <h3>Total Expense</h3>
+          <p class="big" id="total-expense">$0.00</p>
+          <small>Expense in the current month</small>
+        </article>
+
+        <article class="card">
+          <h3>Balance</h3>
+          <p class="big" id="balance">$0.00</p>
+          <small>All-time balance (income - expense)</small>
+        </article>
+      </div>
+
+      <div class="inline">
+        <a href="add.html"><button type="button">Add Record</button></a>
+        <a href="stats.html"><button type="button" class="secondary">View Stats</button></a>
+      </div>
+    </section>
+
+    <section aria-labelledby="recent-title">
+      <h2 id="recent-title">Recent Records</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Type</th>
+              <th scope="col">Category</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Note</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody id="recent-body">
+            <tr><td colspan="6">No records yet. Go to Add page to create one.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p id="home-message" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Web Application Development – Final Project</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

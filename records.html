@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minimal Finance Tracker - Records</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+ <header>
+  <div class="header-inner">
+    <div class="brand">
+      <h1>Minimal Finance Tracker</h1>
+      <small>Simple • Local • No backend</small>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="add.html">Add</a></li>
+        <li><a href="stats.html">Stats</a></li>
+        <li><a href="records.html">Records</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section aria-labelledby="records-title">
+      <h2 id="records-title">All Records</h2>
+
+      <form id="filters" class="card" style="max-width: none;">
+        <div class="inline">
+          <div class="row" style="min-width: 220px;">
+            <label for="filter-month">Month</label>
+            <select id="filter-month"></select>
+          </div>
+
+          <div class="row" style="min-width: 220px;">
+            <label for="filter-type">Type</label>
+            <select id="filter-type">
+              <option value="">All</option>
+              <option value="income">Income</option>
+              <option value="expense">Expense</option>
+            </select>
+          </div>
+
+          <div class="row" style="min-width: 220px;">
+            <label for="filter-category">Category</label>
+            <select id="filter-category"></select>
+          </div>
+        </div>
+
+        <small>Tip: change any filter to update the table.</small>
+      </form>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Type</th>
+              <th>Category</th>
+              <th>Amount</th>
+              <th>Note</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="records-body">
+            <tr><td colspan="6">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p id="records-message" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Web Application Development – Final Project</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

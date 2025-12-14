@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minimal Finance Tracker - Categories</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+ <header>
+  <div class="header-inner">
+    <div class="brand">
+      <h1>Minimal Finance Tracker</h1>
+      <small>Simple • Local • No backend</small>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="add.html">Add</a></li>
+        <li><a href="stats.html">Stats</a></li>
+        <li><a href="records.html">Records</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="two-col">
+    <section aria-labelledby="cat-title">
+      <h2 id="cat-title">Manage Categories</h2>
+
+      <form id="category-form" class="card">
+        <div class="row">
+          <label for="new-category">New category name</label>
+          <input id="new-category" type="text" maxlength="30" placeholder="e.g., Coffee" />
+        </div>
+        <button type="submit">Add Category</button>
+        <small>Note: you cannot delete a category that is already used by existing records.</small>
+      </form>
+
+      <p id="categories-message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section aria-labelledby="list-title">
+      <h2 id="list-title">Current Categories</h2>
+      <ul id="categories-list" style="list-style:none; padding:0; margin:0; display:grid; gap:1rem;"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Web Application Development – Final Project</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
